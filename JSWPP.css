@@ -1,0 +1,146 @@
+html,body{
+    min-height:3000px;
+    width:100%;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    position: fixed;
+    z-index: 10000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    width: 100%;
+}
+section{
+    position:static ;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow:nowrap;
+    justify-content: flex-end;
+}
+ul *{
+    list-style-type: none;
+    padding: 20px;
+    text-decoration: none;
+}
+li:first-child{
+    position: absolute;
+    left:0;
+}
+.slideContainer{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    top:2700px;
+}
+.slide{
+    display: flex;
+    /* width: 100%; */
+}
+.slide img{
+    width: 100%;
+}
+.buttons{
+    position:absolute;
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+
+#next{
+    padding: 2vw;
+    border-radius: 10% 0 0 10%;
+    /* position: absolute; */
+    z-index:10;
+    /* right:0%; */
+    font-size:4vw;
+    color: antiquewhite;
+    opacity:0.5;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#prev{
+    padding: 2vw;
+    border-radius:0 10% 10% 0;
+    /* position: absolute; */
+    z-index:10;
+    /* top:40%;
+    left:0%; */
+    font-size:4vw;
+    color: antiquewhite;
+    opacity:0.5;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#next:hover, #prev:hover{
+    background-color:rgba(70, 69, 69, 0.7);
+}
+.parallax{
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parallax:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.1) ;
+    z-index: 100;
+    mix-blend-mode:color;
+}
+.parallax:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background:linear-gradient(to top, rgb(255, 255, 255), transparent); 
+    z-index: 100;
+}
+.deux{
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.flower{
+    display: block;
+    position:absolute;
+    top: 60vh;
+    /* left: 40%; */
+    margin: auto;
+    z-index: 91; 
+    /* margin: auto; */
+}
+#f5,#f2,#f3,#f4,#f6{
+    display: none;
+}
+#back{
+    width: 300%;
+}
+#fore{
+    position: absolute;
+    left:0px;
+    bottom:-50px;
+    width:500px;
+    z-index: 95;
+}
+
+#mid{
+    z-index: 92;
+}
