@@ -6,6 +6,7 @@ let parallax = document.querySelector('.parallax');
 let flower = document.querySelectorAll('.flower');
 let count = 0;
 let slider = document.querySelector('slideContainer');
+let h1 = document.querySelector('h1');
 
 window.addEventListener('scroll', () =>{
     if(window.scrollY < 2600){
@@ -31,8 +32,16 @@ window.addEventListener('scroll', () =>{
         if(value < 550){
             flower[count].style.top = 60 - 0.1 * value + "vh";
             flower[count].style.width = 500 + 1 *value + "px";
+            h1.style.display = "none";
         }
         else if(value < 1150){
+            h1.style.display= "block";
+            h1.style.fontSize = (0.05 *(value-550)) + "vw";
+            h1.style.top = 50 - 0.05 * (value-550) + "vh"
+            console.log("value",parseInt(h1.style.fontSize));
+            // if(parseInt(h1.style.fontSize) > 30){
+            //     h1.style.fontSize = 30 + "vw";
+            // }
             flower[count].style.top  = 5.3 - 0.05 * (value-550) + "vh";
             flower[count].style.display = "none";
             count = Math.floor(((value-550)/100)%6);
